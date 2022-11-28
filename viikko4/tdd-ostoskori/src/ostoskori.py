@@ -35,7 +35,10 @@ class Ostoskori:
         if poistettava.nimi() in self.shopping_basket:
             item = self.shopping_basket[poistettava.nimi()]
             item.muuta_lukumaaraa(-1)
-            self.shopping_basket.update({poistettava.nimi(): item})
+            if item.lukumaara() == 0:
+                self.shopping_basket.pop(poistettava.nimi())
+            else:
+                self.shopping_basket.update({poistettava.nimi(): item})
 
     def tyhjenna(self):
         pass
