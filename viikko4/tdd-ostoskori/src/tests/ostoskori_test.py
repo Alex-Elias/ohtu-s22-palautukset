@@ -37,3 +37,10 @@ class TestOstoskori(unittest.TestCase):
         self.kori.lisaa_tuote(juusto)
 
         self.assertEqual(self.kori.hinta(), 8)
+
+    def test_tavaroita_korissa_returns_correct_value_with_same_items(self):
+        maito = Tuote("Maito", 3)
+        self.kori.lisaa_tuote(maito)
+        self.kori.lisaa_tuote(maito)
+
+        self.assertEqual(self.kori.tavaroita_korissa(), 2)
