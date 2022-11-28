@@ -68,3 +68,13 @@ class TestOstoskori(unittest.TestCase):
 
         self.assertEqual(ostos.tuotteen_nimi(), "Maito")
         self.assertEqual(ostos.lukumaara(), 1)
+    
+    def test_ostokset_return_two_items_when_two_different_items_are_in_basket(self):
+        maito = Tuote("Maito", 3)
+        juusto = Tuote("Juusto", 5)
+        self.kori.lisaa_tuote(maito)
+        self.kori.lisaa_tuote(juusto)
+
+        ostokset = self.kori.ostokset()
+
+        self.assertEqual(len(ostokset), 2)
