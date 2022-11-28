@@ -41,7 +41,7 @@ class Ostoskori:
                 self.shopping_basket.update({poistettava.nimi(): item})
 
     def tyhjenna(self):
-        pass
+        self.shopping_basket = {}
         # tyhjentää ostoskorin
 
     def ostokset(self):
