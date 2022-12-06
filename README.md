@@ -7,3 +7,5 @@
 [Week 3](https://github.com/Alex-Elias/ohtu-s22-palautukset/tree/main/viikko3/nhl-reader)
 
 [Week 4](https://github.com/Alex-Elias/ohtu-s22-palautukset/tree/main/viikko4)
+
+[Week 5](https://github.com/Alex-Elias/ohtu-s22-palautukset/tree/main/viikko5/tennis)
